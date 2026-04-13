@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>For You ❤️</title>
+    <meta name="description" content="A special birthday surprise just for you">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Poppins:wght@300;400;500;600&family=Dancing+Script:wght@400;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <!-- Floating hearts background -->
+    <div id="floating-hearts-bg"></div>
+
+    <!-- ======================== -->
+    <!-- SCREEN 1: Ready for a Small Surprise? -->
+    <!-- ======================== -->
+    <div id="screen-surprise" class="screen active">
+        <div class="heart-container">
+            <h2 class="screen-title">READY FOR A SMALL SURPRISE?</h2>
+            <div class="image-frame">
+                <img src="images/gift.png" alt="Gift box" class="screen-image gift-bounce" id="gift-img">
+            </div>
+            <div class="btn-row">
+                <button class="pill-btn pink-btn" id="btn-surprise-yes">YES</button>
+                <button class="pill-btn pink-btn" id="btn-surprise-no">NO!</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- ======================== -->
+    <!-- SCREEN 2: How dare you, click Yes! -->
+    <!-- ======================== -->
+    <div id="screen-dare" class="screen">
+        <div class="heart-container">
+            <h2 class="screen-title">HOW DARE YOU, CLICK YES!</h2>
+            <div class="image-frame">
+                <img src="images/dramatic-cat.png" alt="Dramatic cat" class="screen-image img-shake">
+            </div>
+            <div class="btn-row">
+                <button class="pill-btn pink-btn" id="btn-fine">Fine</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- ======================== -->
+    <!-- SCREEN 3: Do You Love Me? -->
+    <!-- ======================== -->
+    <div id="screen-love" class="screen">
+        <div class="heart-container">
+            <h2 class="screen-title">DO YOU LOVE ME?</h2>
+            <div class="image-frame">
+                <img src="images/love-cat.png" alt="Cute cat" class="screen-image cat-wiggle">
+            </div>
+            <div class="btn-row">
+                <button class="pill-btn pink-btn" id="btn-love-yes">YES</button>
+                <button class="pill-btn pink-btn" id="btn-love-no">NO</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- ======================== -->
+    <!-- SCREEN 4: Thanks!! -->
+    <!-- ======================== -->
+    <div id="screen-thanks" class="screen">
+        <div class="heart-container">
+            <h2 class="screen-title">THANKS!! 🥰</h2>
+            <div class="image-frame">
+                <img src="images/happy-cat.png" alt="Happy white cat" class="screen-image img-pulse">
+            </div>
+            <div class="btn-row">
+                <button class="pill-btn action-btn" id="btn-click-here">CLICK HERE</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- ======================== -->
+    <!-- SCREEN 5: Do You Know, I Love Your Smile? -->
+    <!-- ======================== -->
+    <div id="screen-smile" class="screen">
+        <div class="heart-container">
+            <h2 class="screen-title">DO YOU KNOW, I LOVE YOUR SMILE?</h2>
+            <div class="image-frame">
+                <img src="images/smile-cat.png" alt="Smiling cute cat" class="screen-image img-glow">
+            </div>
+            <div class="btn-row">
+                <button class="pill-btn pink-btn" id="btn-smile-yes">YES</button>
+                <button class="pill-btn pink-btn" id="btn-smile-ohyes">OH YES</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- ======================== -->
+    <!-- SCREEN 6: Final Birthday Card -->
+    <!-- ======================== -->
+    <div id="screen-birthday" class="screen">
+        <div class="birthday-card-wrapper">
+            <div class="birthday-card">
+                <!-- Love note at top -->
+                <div class="love-note">
+                    <p class="note-text">With all my love,</p>
+                    <p class="note-text">Always yours ❤️</p>
+                </div>
+
+                <!-- Happy Birthday text -->
+                <h1 class="birthday-title">HAPPY BIRTHDAY BBG</h1>
+
+                <!-- Photo gallery -->
+                <div class="photo-gallery">
+                    <div class="photo-item photo-1" id="photo1">
+                        <img src="images/photo1.jpg" alt="Our memory together" class="gallery-photo">
+                    </div>
+                    <div class="photo-item photo-2" id="photo2">
+                        <div class="spotify-embed">
+                            <iframe style="border-radius:12px"
+                                src="https://open.spotify.com/embed/track/3AJwUDP919kvQ9QcozQPxg?utm_source=generator&theme=0"
+                                width="100%" height="232" frameBorder="0" allowfullscreen=""
+                                allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+                                loading="lazy">
+                            </iframe>
+                        </div>
+                    </div>
+                    <div class="photo-item photo-3" id="photo3">
+                        <img src="images/photo2.jpg" alt="Our special moment" class="gallery-photo">
+                    </div>
+                </div>
+
+                <!-- Music Player -->
+                <div class="music-player" id="music-player">
+                    <div class="player-bar">
+                        <button class="play-btn" id="play-btn">▶</button>
+                        <div class="player-info">
+                            <span class="song-name">Yellow - Coldplay 💛</span>
+                            <div class="progress-bar">
+                                <div class="progress-fill" id="progress-fill"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Audio -->
+    <audio id="bg-music" loop>
+        <source
+            src="https://cdn.pixabay.com/download/audio/2022/10/25/audio_2d8ffcb5f5.mp3?filename=romantic-piano-122964.mp3"
+            type="audio/mpeg">
+    </audio>
+
+    <!-- Confetti library -->
+    <script src="https://cdn.jsdelivr.net/npm/@tsparticles/confetti@3.0.3/tsparticles.confetti.bundle.min.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
